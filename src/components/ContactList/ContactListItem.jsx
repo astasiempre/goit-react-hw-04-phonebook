@@ -1,31 +1,8 @@
-import React, { Component } from 'react';
 
-import styled from 'styled-components';
+import {ListItem, DeleteButton} from './ContactListItem.styled'
 
-const ListItem = styled.li`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  border: 1px solid #ccc;
-  margin: 5px 0;
-  
-`;
 
-const DeleteButton = styled.button`
-  background-color: #ff4f4f;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #d83535;
-  }
-`;
-class ContactListItem extends Component {
-  render() {
-    const {  contact, number, onDeleteContact } = this.props;
+const ContactListItem = ({ contact, number, onDeleteContact }) => {
 
     return (
       <ListItem>
@@ -34,6 +11,6 @@ class ContactListItem extends Component {
       </ListItem>
     );
   }
-}
+
 
 export default ContactListItem;
